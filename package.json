@@ -1,7 +1,9 @@
 {
-  "name": "kitchen-bill",
+  "name": "stoke-list",
+  "description": "Stoke list for the kitchen",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "repository": "https://github.com/beardcoder/stoke-list",
   "dependencies": {
     "autoprefixer": "7.1.6",
     "babel-core": "6.26.0",
