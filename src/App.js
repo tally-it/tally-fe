@@ -23,14 +23,14 @@ class App extends Component {
                 <Router>
                     <Row className='justify-content-center h-100'>
                         <Col className='col-auto bg-dark pt-5 nav-pills'>
-                            <Nav className='flex-column'>
+                            <Nav vertical={true}>
                                 <NavItem><NavLink className='nav-link text-light' activeClassName="active" exact={true} to="/">Home</NavLink></NavItem>
                                 <NavItem><NavLink className='nav-link text-light' activeClassName="active" exact={true} to="/about">About</NavLink></NavItem>
                                 <NavItem><NavLink className='nav-link text-light' activeClassName="active" exact={true} to="/persons">Persons</NavLink></NavItem>
                             </Nav>
 
                         </Col>
-                        <Col className='pt-5'>
+                        <Col className='pt-5 is-scoll'>
                             <Route path="/about" component={About}/>
                             <Route path="/persons" component={Persons}/>
                         </Col>

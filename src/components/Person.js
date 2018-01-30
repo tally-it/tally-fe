@@ -6,13 +6,13 @@ class Person extends Component {
     render() {
         const characteristics = this.props.characteristics;
         return (
-            <Col>
+            <Col className={'mb-4'} lg={3} md={4} sm={6}>
                 <Card>
                     <CardBody>
                         <CardTitle>{characteristics.name}</CardTitle>
                         <CardText>
                             <Currency
-                                quantity={characteristics.debt}
+                                quantity={characteristics.amount}
                                 currency="EUR"
                             />
                         </CardText>
