@@ -1,0 +1,13 @@
+.person {
+    background-color: #565656;
+    border-color: #333;
+
+    > button {
+        appearance: none;
+        background: 0;
+        border-radius: 0;
+        border: 0 none;
+        cursor: pointer;
+        color: inherit;
+    }
+}
