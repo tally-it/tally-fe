@@ -5,3 +5,23 @@ html, body, #root {
 .is-scoll {
     overflow: scroll;
 }
+
+.no-padding {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+
+.nav-main {
+    .nav-link {
+        padding: 0 3rem 0 0;
+        background-color: transparentize(#000, 0.8);
+
+        .svg-wrapper {
+            background-color: transparentize(#000, 0.5);
+            position: relative;
+            display: inline-block;
+            padding: 0.8rem 1.2rem;
+            margin-right: 1.5rem;
+        }
+    }
+}
