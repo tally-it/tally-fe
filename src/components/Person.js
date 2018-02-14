@@ -9,7 +9,7 @@ class Person extends Component {
         this.state = {
             modal: false,
             name: props.characteristics.name,
-            amount: props.characteristics.amount
+            amount: props.characteristics.balance
         };
 
         this.toggle = this.toggle.bind(this);
