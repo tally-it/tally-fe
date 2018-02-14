@@ -41,16 +41,10 @@ class Person extends Component {
 
     render() {
         return <Col className={'mb-4'} lg={3} md={4} sm={6}>
-            <Card inverse={true} className={'person'}>
+            <Card inverse={true} color={'dark'} className={'person'}>
                 <button type={'button'} onClick={this.toggle}>
                     <CardBody>
                         <CardTitle>{this.state.name}</CardTitle>
-                        <CardText>
-                            <Currency
-                                quantity={this.state.amount}
-                                currency="EUR"
-                            />
-                        </CardText>
                     </CardBody>
                 </button>
             </Card>
