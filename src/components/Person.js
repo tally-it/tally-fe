@@ -39,10 +39,19 @@ class Person extends Component {
         });
     };
 
+    // TODO: Insert users image (insert cat-image if no avatar is given)
+    imageStyle = {
+        backgroundImage: 'url(http://thecatapi.com/api/images/get?format=src&type=gif)',
+
+    };
+
     render() {
         return <Col className={'mb-4'} lg={3} md={4} sm={6}>
             <Card inverse={true} color={'dark'} className={'person'}>
                 <button type={'button'} onClick={this.toggle}>
+                    <div class="card-img-top embed-responsive embed-responsive-16by9 avatar"
+                         style={this.imageStyle}>
+                    </div>
                     <CardBody>
                         <CardTitle>{this.state.name}</CardTitle>
                     </CardBody>

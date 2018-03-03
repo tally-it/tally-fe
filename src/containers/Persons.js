@@ -23,7 +23,7 @@ export default class Persons extends Component {
 
     render() {
         return (
-            <Container>
+            <div class="mt-4">
                 <Row>
                     {
                         this.state.users.map(function (item, index) {
@@ -31,7 +31,7 @@ export default class Persons extends Component {
                         })
                     }
                 </Row>
-            </Container>
+            </div>
         );
     }
 }
