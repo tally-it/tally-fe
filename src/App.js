@@ -13,15 +13,7 @@ class App extends Component {
                 <Container className='h-100' fluid>
                     <Topbar/>
                     <Router>
-                        <Row className={'justify-content-center content'}>
-                            <Col className={'col-auto no-padding bg-dark pt-5'}>
-                                <Sidebar/>
-                            </Col>
-                            <Col className='pt-5 is-scoll'>
-                                <Route path="/about" component={About}/>
-                                <Route path="/persons" component={Persons}/>
-                            </Col>
-                        </Row>
+                        <Route path="/persons" component={Persons}/>
                     </Router>
                 </Container>
         )
