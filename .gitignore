@@ -78,3 +78,6 @@ typings/
 
 # dotenv environment variables file
 .env
+
+# KDE
+.idea/
