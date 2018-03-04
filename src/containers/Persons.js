@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Person from './../components/Person';
-import {Container, Row} from 'reactstrap';
+import {Row} from 'reactstrap';
 import axios from 'axios';
 
 

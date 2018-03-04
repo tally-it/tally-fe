@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import '../App.scss';
-import {Home, Users, Book} from 'react-feather';
 import PackageData from '../../package.json'
 import {
     Collapse,

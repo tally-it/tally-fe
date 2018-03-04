@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import Currency from 'react-currency-formatter';
-import {Col, Card, CardBody, CardTitle, CardText, Button, Modal, ModalHeader, ModalBody, ModalFooter} from 'reactstrap';
+import {Col, Card, CardBody, CardTitle, Row, Modal, ModalHeader, ModalBody} from 'reactstrap';
 import './Person.scss'
+import Balance from './Balance.js';
 
 class Person extends Component {
     constructor(props) {
@@ -20,24 +20,6 @@ class Person extends Component {
             modal: !this.state.modal
         });
     }
-
-    IncrementItem = () => {
-        this.setState({
-            amount: (parseFloat(this.state.amount) + 1.00)
-        });
-    };
-
-    IncrementItem2 = () => {
-        this.setState({
-            amount: (parseFloat(this.state.amount) + 2.00)
-        });
-    };
-
-    IncrementItem25 = () => {
-        this.setState({
-            amount: (parseFloat(this.state.amount) + 2.50)
-        });
-    };
 
     // TODO: Insert users image (insert cat-image if no avatar is given)
     imageStyle = {
@@ -59,18 +41,31 @@ class Person extends Component {
             </Card>
             <Modal tabindex="-1" role="dialog" isOpen={this.state.modal} toggle={this.toggle}
                    className={this.props.className}>
+
                 <ModalHeader toggle={this.toggle}>{this.state.name}</ModalHeader>
                 <ModalBody>
-                    Aktueller Kontostand: <Currency
-                    quantity={this.state.amount}
-                    currency="EUR"
-                />
+                    <Row>
+                        <Col sm={6}>
+                            Produkt wählen
+                        </Col>
+                        <Col sm={6}>
+                            <div class="balance text-center">
+                                <h4>
+                                    Kontostand
+                                </h4>
+                                <Balance balance={this.state.amount} />
+                            </div>
+                        </Col>
+                        <Col sm={6}>
+                            3
+                        </Col>
+                        <Col sm={6}>
+                            4
+                        </Col>
+                    </Row>
+
+
                 </ModalBody>
-                <ModalFooter>
-                    <Button color="primary" onClick={this.IncrementItem}>+ 1.0 €</Button>{' '}
-                    <Button color="secondary" onClick={this.IncrementItem2}>+ 2.00 €</Button>
-                    <Button color="secondary" onClick={this.IncrementItem25}>+ 2.50 €</Button>
-                </ModalFooter>
             </Modal>
         </Col>;
     }
